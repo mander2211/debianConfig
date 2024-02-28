@@ -1,0 +1,89 @@
+Commands and Notes
+Installing packages
+
+The following command was used to install the required packages:
+
+sudo apt install alacritty light sway swaybg swayidle swayimg swaylock waybar wofi fonts-font-awesome
+##Mine are above plus: xdg-desktop-portal-wlr xwayland vim neofetch foot sway-backgrounds flatpak pulseaudio sddm
+python3 nodejs npm gcc build-essential gdb gimp synaptic htop timeshift ark
+
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub org.mozilla.firefox
+
+Required Directories
+
+The following command will create the three required directories, if they’re not already present:
+
+mkdir -p ~/.config/sway ~/.config/waybar ~/.config/wofi
+
+Config Files
+
+The Sway setup that was shown in the video requires some specific config settings. Below is a list of files, and the content that belongs in each:
+~/.config/sway/config
+
+-swayconfig
+
+~/.config/sway/audio.sh
+
+swayaudio
+
+~/.config/sway/exit.sh
+
+-swayexit
+
+~/.config/sway/lock_screen.sh
+
+-swaylockscreen
+
+~/.config/waybar/config
+
+-waybarconfig
+
+~/.config/waybar/style.css
+
+-waybarstyle
+
+~/.config/wofi/config
+
+-woficonfig
+
+~/.config/wofi/style.css
+
+-wofistyle
+
+Odds and Ends
+Ensure the scripts are all executable:
+
+chmod +x ~/.config/sway/*.sh
+
+Install the wallpaper file
+
+Download the wallpaper I used here, and copy it to the appropriate directory:
+
+cp wallpaper.jpg ~/.config/sway/wallpaper.jpg
+
+Keyboard Shortcuts
+
+Although there’s more keyboard shortcuts in Sway than can be covered in an introductory video, but the following are the most common to be used. Note that some of these keyboard shortcuts were altered from Sway’s default configuration.
+
+(Shift, Super) q: Quit active app
+
+(Shift, Super) e: Exit sway itself
+
+(Super) t: Open a terminal
+
+(Super) space: Application launcher
+
+(Super) escape: Lock the screen
+
+(Super) any arrow key: Move focus to another app/quadrant
+
+(Shift, Super) any arrow key: Move the active window in the direction of the arrow you pressed
+
+(Super) r: Resize the active window
+
+(Super) any number: Switch to that numbered workspace
+
+(Shift, Super) f: Toggle floating mode
+
+(Super) s: Create a stack
