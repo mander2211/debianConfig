@@ -1,0 +1,51 @@
+comment out wifi item from /etc/network/interfaces so that KDE can control connections
+
+alias py='python3'
+alias install='sudo apt install'
+
+sudo apt install kde-plasma-desktop
+
+#KDE Settings
+install kwin dynamic desktops as a task switcher
+double click to open folders
+touch pad single tap
+
+sudo apt install alacritty python3 nodejs npm gcc build-essential gdb vim gimp synaptic htop timeshift ark yakuake zsh
+
+We use Alacritty's default Linux config directory as our storage location here.
+mkdir -p ~/.config/alacritty/themes
+git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
+
+import = [
+    "~/.config/alacritty/themes/themes/{theme}.toml"
+]
+
+or yaml version:
+
+import:
+  - ~/.alacritty-colorscheme/themes/{scheme_name}.yaml
+
+#install dolphin if you dont pick kde.  I like 
+
+install visual studio from website.  just get deb file.
+
+sudo apt install flatpak
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub org.mozilla.firefox
+flatpak install flathub org.libreoffice.LibreOffice
+flatpak install flathub org.videolan.VLC
+flatpak install flathub org.mozilla.Thunderbird
+flatpak install flathub org.kde.gcompris
+flatpak install flathub org.kde.isoimagewriter
+flatpak install flathub org.mapeditor.Tiled
+
+#Alacritty opacity settings.  put in its own file and import into kde window managment s#settings
+[Application settings for Alacritty]
+Description=Application settings for Alacritty
+opacityactive=90
+opacityactiverule=2
+wmclass=alacritty Alacritty
+wmclasscomplete=true
+wmclassmatch=1
+######
+
