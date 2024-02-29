@@ -6,6 +6,7 @@ cp ../waybar/* ~/.config/waybar/
 cp ../wofi/* ~/.config/wofi/
 cp ../wallpaper.png ~/.config/sway/
 cp ../foot/foot.ini ~/.config/foot/
+cp ../.bash_aliases ~/
 chmod +x ~/.config/sway/audio.sh
 chmod +x ~/.config/sway/exit.sh
 chmod +x ~/.config/sway/lock_screen.sh
