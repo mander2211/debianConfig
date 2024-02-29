@@ -16,6 +16,8 @@ The following command will create the three required directories, if they’re n
 
 mkdir -p ~/.config/sway ~/.config/waybar ~/.config/wofi
 
+
+
 Config Files
 
 The Sway setup that was shown in the video requires some specific config settings. Below is a list of files, and the content that belongs in each:
