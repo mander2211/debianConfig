@@ -10,6 +10,12 @@
 # pressing Super + Shift + C.                                                      #
 #==================================================================================#
 
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+       dwt enabled
+       tap enabled
+       natural_scroll enabled
+       middle_emulation enabled
+}
 
 #========================#
 # Appearance and Theming #
@@ -37,7 +43,7 @@ gaps outer 3
 default_border pixel 2
 
 # Set the Wallpaper:
-output * bg $HOME/.config/sway/wallpaper.jpg fill
+output * bg $HOME/.config/sway/wallpaper.png fill
 
 
 #====================================#
@@ -65,7 +71,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec $HOME/.config/sway/exit.sh
 
 # Screen locking (automatic, with a timeout)
-set $lock swaylock -c 550000
+set $lock swaylock -i $HOME/.config/sway/wallpaper.png
 exec swayidle -w \
     timeout 600 $lock \
     timeout 570 'swaymsg "output * dpms off"' \
@@ -173,13 +179,13 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 # You can "split" the current object of your focus with
 # $mod+b or $mod+v, for horizontal and vertical splits
 # respectively.
-bindsym $mod+b splith
-bindsym $mod+v splitv
+bindsym $mod+n splith
+bindsym $mod+b splitv
 
 # Switch the current container between different layout styles
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $mod+Shift+s layout toggle split
 
 # Make the current focus fullscreen
 bindsym $mod+f fullscreen
@@ -231,14 +237,14 @@ set $menu wofi --show drun  -i | xargs swaymsg exec --
 bindsym $mod+shift+b exec firefox
 
 # Open a file manager:
-bindsym ctrl+$mod+f exec pcmanfm
+bindsym ctrl+$mod+f exec thunar
 
 # Open a terminal emulator:
 set $term foot
 bindsym $mod+t exec $term
 
 # Kill focused window:
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # Open the application launcher:
 bindsym $mod+space exec $menu
