@@ -21,6 +21,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flatpakrepo
 ##flatpak install flathub org.mozilla.firefox -y -y
 ##flatpak install flathub org.videolan.VLC -y -y
 
+echo "In ~/.Profiles add "export MOZ_ENABLE_WAYLAND=1"
 echo "Complete..."
 
 
