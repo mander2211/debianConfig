@@ -239,6 +239,9 @@ bindsym $mod+shift+b exec firefox
 # Open a file manager:
 bindsym ctrl+$mod+f exec thunar
 
+#Open VS Code
+bindsym $mod+c exec code
+
 # Open a terminal emulator:
 set $term foot
 bindsym $mod+t exec $term
