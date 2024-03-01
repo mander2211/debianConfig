@@ -10,6 +10,11 @@
 # pressing Super + Shift + C.                                                      #
 #==================================================================================#
 
+#========================
+# Inputs and Outputs #
+#========================#:
+exec always ~/.config/sway/clamshell.sh
+
 input "2:7:SynPS/2_Synaptics_TouchPad" {
        dwt enabled
        tap enabled
@@ -17,9 +22,27 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
        middle_emulation enabled
 }
 
-#========================#
+# output LVD5-1{
+#	pos 0 0
+#	res 1600x900
+#}
+# output DP-3 {
+#	pos 0 0
+#	res 3440x1440
+#}
+
+output 'Dell Inc. AW3423DWF CPM32S3' scale 2
+output 'Dell Inc. AW3423DWF CPM32S3' pos 0 0 res 3440x1440
+
+set $laptop 'Chimei Innolux Corporation 0x1484 0x00000000'
+bindswitch --reload --locked lid:on output $laptop disable
+bindswitch --reload --locked lid:off output $laptop enable
+
+#exec gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-Dark' 
+
+#========================
 # Appearance and Theming #
-#========================#
+#========================#:
 # Declare Colors:
 set $background #332b2b
 set $color_urgent #fb4934
@@ -71,7 +94,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec $HOME/.config/sway/exit.sh
 
 # Screen locking (automatic, with a timeout)
-set $lock swaylock -i $HOME/.config/sway/wallpaper.png
+set $lock swaylock -i ~/.config/sway/wallpaper.png
 exec swayidle -w \
     timeout 600 $lock \
     timeout 570 'swaymsg "output * dpms off"' \
@@ -80,7 +103,7 @@ exec swayidle -w \
 
 # Screen locking (manual)
 set $lock_screen exec bash ~/.config/sway/lock_screen.sh
-bindsym $mod+Escape exec $lock_screen
+bindsym $mod+escape exec $lock_screen
 
 
 #========================================#
@@ -239,7 +262,7 @@ bindsym $mod+shift+b exec firefox
 # Open a file manager:
 bindsym ctrl+$mod+f exec thunar
 
-#Open VS Code
+#Open VS Code:
 bindsym $mod+c exec code
 
 # Open a terminal emulator:
