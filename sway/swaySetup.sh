@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mkdir -p ~/.config/sway ~/.config/waybar ~/.config/wofi ~/.config/foot ~/Downloads ~/Documents
-cp audio.sh config exit.sh lock_screen.sh ~/.config/sway/
+cp audio.sh config exit.sh lock_screen.sh clamshell.sh ~/.config/sway/
 cp ../waybar/* ~/.config/waybar/
 cp ../wofi/* ~/.config/wofi/
 cp ../wallpaper.png ~/.config/sway/
@@ -12,6 +12,7 @@ update-grub
 chmod +x ~/.config/sway/audio.sh
 chmod +x ~/.config/sway/exit.sh
 chmod +x ~/.config/sway/lock_screen.sh
+chmod +x ~/.config/sway/clamshell.sh
 
 
 ##apps
