@@ -31,7 +31,7 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 #	res 3440x1440
 #}
 
-output 'Dell Inc. AW3423DWF CPM32S3' scale 2
+output 'Dell Inc. AW3423DWF CPM32S3' scale 1
 output 'Dell Inc. AW3423DWF CPM32S3' pos 0 0 res 3440x1440
 
 set $laptop 'Chimei Innolux Corporation 0x1484 0x00000000'
@@ -257,7 +257,8 @@ bindsym XF86MonBrightnessUp exec light -A 10
 set $menu wofi --show drun  -i | xargs swaymsg exec --
 
 # Launch your browser:
-bindsym $mod+shift+b exec firefox
+set $browser flatpak run org.mozilla.firefox
+bindsym $mod+shift+b exec $browser
 
 # Open a file manager:
 bindsym ctrl+$mod+f exec thunar
