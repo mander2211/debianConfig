@@ -29,7 +29,8 @@
 }
 
 #clock {
-    background: #1f1f1f;
+    /*background: #1f1f1f;*/
+    background: transparent;
     color: #ffffff;
     margin-right: 4px;
     padding: 2px 8px;
