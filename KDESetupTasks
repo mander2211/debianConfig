@@ -3,13 +3,13 @@ Win+T tiles
 Screen resolution, position, hz
 breeze dark for dark theme / gruvbox theme
 taskbar auto hide and floating
-desktop effects - blur, cube
+desktop effects - blur, cube, transparent
 power management - never sleep
 animation speed high
-nvidia driver / hdr
+nvidia driver open/ hdr
 flatpak in discover/ restart/ add flathub
 clone debianConfig
 kitty w/conf, btop, tldr, eza, fzf, fish, nodejs, npm, gimp, timeshift, ark, vlc, neofetch, go, vscode,neovim, krita, bottles, lutris/hero, steam, curl,tmux, virtual machine manager, firefox, libreoffice, keepassxc and db, discord,ripgrep, bat, network manager, awscli, docker, ssh, rsync, browsh,   
 optional - DevilutionX, 
 git config git
-config boot order, grub timeout, and grub screen, run grub-update
+config boot order, grub timeout, and grub screen, run update-grub
