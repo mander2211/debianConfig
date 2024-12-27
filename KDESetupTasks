@@ -13,3 +13,4 @@ kitty w/conf, btop, tldr, eza, fzf, fish, nodejs, npm, gimp, timeshift, ark, vlc
 optional - DevilutionX, 
 git config git
 config boot order, grub timeout, and grub screen, run update-grub
+set time to local on linux - timedatectl set-local-rtc 1 --adjust-system-clock
