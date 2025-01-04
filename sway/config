@@ -214,7 +214,7 @@ bindsym $mod+Shift+s layout toggle split
 bindsym $mod+f fullscreen
 
 # Toggle the current focus between tiling and floating mode
-bindsym $mod+Shift+f floating toggle
+bindsym $mod+ctrl+f floating toggle
 
 # Swap focus between the tiling area and the floating area
 bindsym $mod+tab focus mode_toggle
@@ -257,17 +257,18 @@ bindsym XF86MonBrightnessUp exec light -A 10
 set $menu wofi --show drun  -i | xargs swaymsg exec --
 
 # Launch your browser:
-set $browser flatpak run org.mozilla.firefox
+# set $browser flatpak run org.mozilla.firefox
+set $browser firefox-esr
 bindsym $mod+shift+b exec $browser
 
 # Open a file manager:
-bindsym ctrl+$mod+f exec thunar
+bindsym $mod+shift+f exec dolphin
 
 #Open VS Code:
 bindsym $mod+c exec code
 
 # Open a terminal emulator:
-set $term foot
+set $term kitty
 bindsym $mod+t exec $term
 
 # Kill focused window:
